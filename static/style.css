@@ -5,52 +5,116 @@
 }
 
 body {
+
     font-family: Arial, sans-serif;
-
-    height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     background: linear-gradient(
         135deg,
         #667eea,
         #764ba2
     );
+
+    min-height: 100vh;
+
+    padding: 40px;
 }
 
-.container {
+.main-container {
 
-    width: 420px;
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.hero-section {
+
+    text-align: center;
+
+    color: white;
+
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+
+    font-size: 52px;
+
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+
+    font-size: 20px;
+
+    line-height: 1.6;
+}
+
+.info-box {
 
     background: white;
 
-    padding: 35px;
+    padding: 25px;
+
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.info-box h2 {
+
+    margin-bottom: 15px;
+
+    color: #333;
+}
+
+.info-box p {
+
+    margin-bottom: 10px;
+
+    line-height: 1.7;
+
+    color: #555;
+}
+
+.info-box ul {
+
+    padding-left: 20px;
+}
+
+.info-box li {
+
+    margin-bottom: 10px;
+
+    color: #444;
+}
+
+.detector-box {
+
+    background: white;
+
+    padding: 30px;
 
     border-radius: 18px;
 
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 
     text-align: center;
-
-    animation: fadeIn 0.8s ease;
 }
 
-h1 {
+.detector-box h2 {
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
     color: #333;
-
-    font-size: 32px;
 }
 
 textarea {
 
     width: 100%;
 
-    height: 140px;
+    height: 160px;
 
     padding: 15px;
 
@@ -80,7 +144,7 @@ button {
 
     width: 100%;
 
-    padding: 14px;
+    padding: 15px;
 
     border: none;
 
@@ -103,35 +167,24 @@ button {
 
 button:hover {
 
-    transform: scale(1.03);
+    transform: scale(1.02);
 
     opacity: 0.95;
 }
 
-h2 {
+.result {
 
     margin-top: 25px;
 
-    padding: 12px;
+    padding: 15px;
 
     border-radius: 10px;
 
-    background-color: #f4f4f4;
-
-    color: #222;
+    background: #f4f4f4;
 
     font-size: 24px;
-}
 
-@keyframes fadeIn {
+    font-weight: bold;
 
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    color: #222;
 }

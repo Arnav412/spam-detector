@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
-    <title>Spam Detector</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Spam Detector</title>
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='style.css') }}">
@@ -12,31 +17,92 @@
 
 <body>
 
-    <div class="container">
+    <div class="main-container">
 
-        <h1>Spam Detection App</h1>
+        <!-- HERO SECTION -->
 
-        <form action="/predict" method="POST">
+        <div class="hero-section">
 
-            <textarea
-                name="message"
-                placeholder="Enter your message"
-                required>
-            </textarea>
+            <h1>📧 AI Spam Detector</h1>
 
-            <br>
+            
 
-            <button type="submit">
-                Predict
-            </button>
+        </div>
 
-        </form>
+        <!-- ABOUT SECTION -->
 
-        {% if prediction %}
+        <div class="info-box">
 
-            <h2>{{ prediction }}</h2>
+            <h2> About This Project</h2>
+        <ul>
+            <li><p>
+                This website uses Machine Learning to
+                analyze text messages and classify them
+                as Spam or Ham (Not Spam).
+            </p></li>
 
-        {% endif %}
+            <li><p>
+                The model is trained on thousands of
+                real SMS messages using
+                CountVectorizer and Naive Bayes Algorithm.
+            </p></li>
+        </ul>
+
+        </div>
+
+        <!-- FEATURES -->
+
+        <div class="info-box">
+
+            <h2> Features</h2>
+
+            <ul>
+
+                <li> Detects Spam Messages</li>
+
+                <li> Machine Learning Based Prediction</li>
+
+                <li> Fast and Accurate Results</li>
+
+                <li> Simple and Interactive UI</li>
+
+                <li> Built using Flask and Python</li>
+
+            </ul>
+
+        </div>
+
+        <!-- DETECTOR BOX -->
+
+        <div class="detector-box">
+
+            <h2> Try Spam Detection</h2>
+
+            <form action="/predict" method="POST">
+
+                <textarea
+                    name="message"
+                    placeholder="Enter your message here..."
+                    required>
+                </textarea>
+
+                <button type="submit">
+                    Predict Message
+                </button>
+
+            </form>
+
+            {% if prediction %}
+
+                <div class="result">
+
+                    {{ prediction }}
+
+                </div>
+
+            {% endif %}
+
+        </div>
 
     </div>
 
